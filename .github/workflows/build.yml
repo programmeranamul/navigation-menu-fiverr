@@ -1,0 +1,22 @@
+name: Build
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Configure git
+      run: git config --global core.autocrlf false
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Setup Node
+      uses: actions/setup-node@v2
+      with:
+        cache: "npm"
+    - name: Install dependencies
+      run: npm install
+    - name: Lint project
+      run: npm run lint
+    - name: Compile webpack
+      run: npm run build
+    - name: Build Docker image
+      run: npm run docker:build

@@ -1,0 +1,99 @@
+$myCoolColor: grey;
+$myOtherColor: #80ffff;
+$black: #000;
+$white: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.CoolComponentStyling {
+  display: inline-block;
+  padding: 0 20px;
+  margin: 10px;
+  text-align: center;
+  background: $myCoolColor;
+
+  h3 {
+    font-family: sans;
+    color: $myOtherColor;
+  }
+
+  img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+}
+
+.Dashboard-Page {
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+.Listings-Page {
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+.About-Page {
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation {
+  background-color: $black;
+  color: $white;
+  &-bar {
+    padding: 15px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button{
+      background-color: transparent;
+      color: $myCoolColor;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: all .3s;
+      &:hover{
+        color: $white;
+      }
+    }
+	a{
+		color: $myCoolColor;
+		text-decoration: none;
+    transition: all .3s;
+    &:hover{
+      color: $white;
+    }
+	}
+	.active{
+		color: $white;
+	}
+    .side {
+      // width: 50%;
+      &-left {
+        display: flex;
+        gap: 40px;
+		.logo{
+			color: $white;
+		}
+      }
+    }
+  }
+}
